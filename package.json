@@ -1,0 +1,53 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "D:\\Learning\\Trainings\\InHouseApps\\AddressBook_Angular_Final\\plugins\\cordova-plugin-addressbooksync",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "D:\\Learning\\Trainings\\InHouseApps\\AddressBook_Angular_Final\\plugins\\cordova-plugin-addressbooksync",
+        "spec": "D:\\Learning\\Trainings\\InHouseApps\\AddressBook_Angular_Final\\plugins\\cordova-plugin-addressbooksync",
+        "type": "directory"
+      },
+      "D:\\Learning\\Trainings\\InHouseApps\\AddressBook_Angular_Final\\cordova\\node_modules"
+    ]
+  ],
+  "_from": "..\\plugins\\cordova-plugin-addressbooksync",
+  "_id": "cordova-plugin-addressbooksync@1.0.0",
+  "_inCache": true,
+  "_location": "/cordova-plugin-addressbooksync",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "D:\\Learning\\Trainings\\InHouseApps\\AddressBook_Angular_Final\\plugins\\cordova-plugin-addressbooksync",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "D:\\Learning\\Trainings\\InHouseApps\\AddressBook_Angular_Final\\plugins\\cordova-plugin-addressbooksync",
+    "spec": "D:\\Learning\\Trainings\\InHouseApps\\AddressBook_Angular_Final\\plugins\\cordova-plugin-addressbooksync",
+    "type": "directory"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "file:..\\plugins\\cordova-plugin-addressbooksync",
+  "_shasum": "1ffd24102f930a7f905c5483c29a73fc4506d479",
+  "_shrinkwrap": null,
+  "_spec": "D:\\Learning\\Trainings\\InHouseApps\\AddressBook_Angular_Final\\plugins\\cordova-plugin-addressbooksync",
+  "_where": "D:\\Learning\\Trainings\\InHouseApps\\AddressBook_Angular_Final\\cordova\\node_modules",
+  "cordova": {
+    "id": "cordova-plugin-addressbooksync",
+    "platforms": [
+      "browser",
+      "android"
+    ]
+  },
+  "dependencies": {},
+  "description": "Cordova plugin for address book sync",
+  "devDependencies": {},
+  "name": "cordova-plugin-addressbooksync",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "version": "1.0.0"
+}

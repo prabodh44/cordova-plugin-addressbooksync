@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="cordova-plugin-addressbooksync"
+		version="2.0.0">
+		
+	<name>Smartflow</name>
+	<description>Cordova plugin for addresbook sync</description>
+	<repo>svn://</repo>
+
+	<!-- Smartflow plugin -->
+	<js-module src="www/addressbooksync.js" name="module-AddressBookSync">  <!-- the name attribute here is not used anywhere -->
+		<clobbers target="addressBookSync" />  <!-- This variable is visible to call from application -->
+	</js-module>
+
+	<!-- browser -->
+	<platform name="browser">
+		<config-file target="config.xml" parent="/*">
+            <feature name="AddressBookSync">
+                <param name="addressbooksync-package" value="AddressBookSync" />
+            </feature>
+        </config-file>
+		
+		<js-module src="src/browser/AddressBookSyncProxy.js" name="AddressBookSync"> <!-- this is mapper name for native.. links to www javascript file -->
+			<merges target="" />
+			<runs/>
+		</js-module>
+	</platform>
+	
+	<!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="AddressBookSync">
+                <param name="android-package" value="cordova.plugin.addressbooksync.AddressBookSync"/>
+            </feature>
+        </config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+			<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+			<uses-permission android:name="android.permission.INTERNET" />
+			<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+			<uses-permission android:name="android.permission.USE_CREDENTIALS" />
+			<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+		
+		<config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
+            <meta-data
+                android:name="com.google.android.apps.drive.APP_ID"
+                android:value="id=553625486416" />
+        </config-file>
+
+        <source-file src="src/android/AddressBookSync.java" target-dir="src/cordova/plugin/addressbooksync" />
+
+		<!-- -->
+		<source-file src="src/android/libs/google-api-client-1.14.1-beta.jar" target-dir="libs" framework="true" />
+		<source-file src="src/android/libs/google-api-client-android-1.14.1-beta.jar" target-dir="libs" framework="true" />
+		<source-file src="src/android/libs/google-api-services-drive-v2-rev70-1.14.1-beta.jar" target-dir="libs" framework="true" />
+		<source-file src="src/android/libs/google-http-client-1.14.1-beta.jar" target-dir="libs" framework="true" />
+		<source-file src="src/android/libs/google-http-client-android-1.14.1-beta.jar" target-dir="libs" framework="true" />
+		<source-file src="src/android/libs/google-http-client-gson-1.14.1-beta.jar" target-dir="libs" framework="true" />
+		<source-file src="src/android/libs/google-oauth-client-1.14.1-beta.jar" target-dir="libs" framework="true" />
+		<source-file src="src/android/libs/google-play-services.jar" target-dir="libs" framework="true" />
+		<source-file src="src/android/libs/gson-2.1.jar" target-dir="libs" framework="true" />
+		<source-file src="src/android/libs/jsr305-1.3.9.jar" target-dir="libs" framework="true" />
+		
+		<framework src="com.android.support:support-v4:24.1.1+" />
+		
+     </platform>
+
+
+	 <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="AddressBookSync">
+                <param name="ios-package" value="AddressBookSync" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/AddressBookSync.h" />
+        <source-file src="src/ios/AddressBookSync.m" />
+    </platform> 
+</plugin>
